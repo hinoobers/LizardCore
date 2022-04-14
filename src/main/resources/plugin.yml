@@ -1,0 +1,5 @@
+main: org.hinoob.lizardcore.LizardCore
+version: 0.1
+name: LizardCore
+depend:
+  - ProtocolLib

@@ -1,0 +1,43 @@
+debug: true # turns on exception messages
+database:
+  # Available drivers are 'mysql' and 'sqlite
+  driver: 'sqlite'
+
+  # To configure this, find the section for your driver
+  sqlite:
+    # Path to the sqlite database file
+    path: '%plugindatafolder%/database.sqlite'
+  mysql:
+    # MySQL database connection settings
+    host: 'localhost'
+    port: 3306
+    useSSL: false
+    username: 'root'
+    password: 'root'
+    database: 'database'
+vanish:
+  # NOTE: To see vanished players, you must be either op or have the permission 'lizardcore.vanish.see'
+
+  anti-target: true # makes mobs unable to target a vanished player
+  anti-chat: true # has protection from accidentally talking in chat
+  autovanish: true # automatically vanishes when you log in, when you have the permission 'lizardcore.command.vanish'
+
+  hide-join-and-leave-messages: true
+  hide-death-messages: true
+
+  fake-leave-message:
+    enabled: false
+    message: '&e%player% left the game.'
+spawn:
+  location:
+    x: -1
+    y: -1
+    z: -1
+    yaw: -1
+    pitch: -1
+    world: ''
+  triggers:
+    on-join: true
+    on-respawn: true
+  set: false
+
