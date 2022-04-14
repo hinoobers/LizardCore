@@ -9,7 +9,6 @@ import org.hinoob.lizardcore.listener.SpawnListener;
 import org.hinoob.lizardcore.listener.VanishListener;
 import org.hinoob.lizardcore.manager.*;
 import org.hinoob.lizardcore.user.User;
-import org.hinoob.lizardcore.util.ReloadUtil;
 import org.hinoob.lizardcore.util.VanishUtil;
 
 import java.io.File;
@@ -45,7 +44,7 @@ public class LizardCore extends JavaPlugin {
         }
 
         userManager = new UserManager(this);
-        userManager.load(); // reload support smh
+        userManager.load(); // not needed to call it here, but we can
 
         commandManager = new CommandManager(this);
         commandManager.load();
@@ -55,9 +54,6 @@ public class LizardCore extends JavaPlugin {
 
         // register events
         registerListeners();
-
-        // reload support smh
-        if(!Bukkit.getOnlinePlayers().isEmpty()) ReloadUtil.onReloadFinished(this);
 
         getLogger().info("LizardCore has been enabled!");
     }
@@ -72,7 +68,6 @@ public class LizardCore extends JavaPlugin {
                 VanishUtil.toggleVanish(player, false);
             }
         }
-
         getLogger().info("LizardCore has been disabled!");
     }
 

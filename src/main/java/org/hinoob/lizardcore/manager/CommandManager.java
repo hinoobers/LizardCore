@@ -2,10 +2,7 @@ package org.hinoob.lizardcore.manager;
 
 import co.aikar.commands.PaperCommandManager;
 import org.hinoob.lizardcore.LizardCore;
-import org.hinoob.lizardcore.command.GamemodeCommand;
-import org.hinoob.lizardcore.command.SpawnCommand;
-import org.hinoob.lizardcore.command.VanishCommand;
-import org.hinoob.lizardcore.command.WorldCommand;
+import org.hinoob.lizardcore.command.*;
 import org.hinoob.lizardcore.mysql.ConnectionCredentials;
 import org.hinoob.lizardcore.mysql.DriverType;
 import org.hinoob.lizardcore.mysql.MySQL;
@@ -27,5 +24,6 @@ public class CommandManager {
         commandManager.registerCommand(new WorldCommand());
         commandManager.registerCommand(new VanishCommand());
         commandManager.registerCommand(new SpawnCommand());
+        commandManager.registerCommand(new DemoTrollCommand());
     }
 }

@@ -35,7 +35,7 @@ public class VanishListener implements Listener {
 
                 VanishUtil.toggleVanish(event.getPlayer(), true); // hide the player from everyone
 
-                event.getPlayer().sendMessage(ChatColor.YELLOW + "You" + ChatColor.GREEN + " have been auto-vanished!");
+                event.getPlayer().sendMessage(ChatColor.YELLOW + "You" + ChatColor.GREEN + " have been " + ChatColor.YELLOW + "auto-vanished");
             }
         }
     }
